@@ -9,33 +9,35 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlin.collections.ArrayList
 
-class NoteRecyclerAdapter(val context: Context, val listener: INoteAdapter):
+class NoteRecyclerAdapter(val context: Context, val listener: INoteAdapter) :
     RecyclerView.Adapter<NoteRecyclerAdapter.NoteViewHolder>() {
     val allnotes = ArrayList<Note>()
-    inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+    inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val textView = itemView.findViewById<TextView>(R.id.textView)
         val deletebutton = itemView.findViewById<ImageView>(R.id.deletebutton)
 
 
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        val v =  NoteViewHolder(LayoutInflater.from(context).inflate(R.layout.cardview, parent, false))
+        val v =
+            NoteViewHolder(LayoutInflater.from(context).inflate(R.layout.cardview, parent, false))
 
         v.deletebutton.setOnClickListener {
-        listener.onItemClicked(allnotes[v.adapterPosition])
+            listener.onItemClicked(allnotes[v.adapterPosition])
         }
         return v
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-    val currentNode = allnotes[position]
+        val currentNode = allnotes[position]
         holder.textView.text = currentNode.task_name
 
     }
-    fun updateList(newList : List<Note>){
+
+    fun updateList(newList: List<Note>) {
         allnotes.clear()
         allnotes.addAll(newList)
 
@@ -48,7 +50,7 @@ class NoteRecyclerAdapter(val context: Context, val listener: INoteAdapter):
         return allnotes.size
     }
 
-    interface INoteAdapter{
+    interface INoteAdapter {
 
         fun onItemClicked(note: Note)
     }

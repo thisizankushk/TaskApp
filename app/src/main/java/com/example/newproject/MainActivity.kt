@@ -2,9 +2,7 @@ package com.example.newproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -37,13 +35,30 @@ class MainActivity : AppCompatActivity(), NoteRecyclerAdapter.INoteAdapter {
         })
         val submitbutton = findViewById<Button>(R.id.submitbutton)
         submitbutton.setOnClickListener {
+            submitbutton.animate().apply {
+                duration = 500
+                rotationXBy(360f)
+            }.start()
             submitData()
         }
     }
 
     override fun onItemClicked(note: Note) {
         viewmodel.deleteNote(note)
+//        val deletebutton = findViewById<ImageView>(R.id.deletebutton)
+//        val cardView = findViewById<CardView>(R.id.cardview)
+//        deletebutton.setOnClickListener{
+//            deletebutton.animate().apply {
+//                duration = 500
+//                rotationXBy(360f)
+//            }.start()
+//        }
+//        cardView.animate().apply {
+//            duration = 1000
+//            translationXBy(100f)
+//        }.start()
         Toast.makeText(this, "Task deleted!!", Toast.LENGTH_SHORT).show()
+
 
     }
 
@@ -52,10 +67,12 @@ class MainActivity : AppCompatActivity(), NoteRecyclerAdapter.INoteAdapter {
         val noteText = addedText.text.toString()
         if (noteText.isNotEmpty()) {
             viewmodel.insertNote(Note(noteText))
+            Toast.makeText(this, "Task Added!!", Toast.LENGTH_SHORT).show()
+            addedText.setText("")
         }
-        Toast.makeText(this, "Task Added!!", Toast.LENGTH_SHORT).show()
-        addedText.setText("")
 
 
     }
+
+
 }

@@ -6,9 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/imagec"
-    tools:context=".MainActivity"
     android:isScrollContainer="false"
-    >
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/editText"
@@ -42,8 +41,20 @@
         android:layout_margin="5dp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submitbutton"
+        app:layout_constraintTop_toBottomOf="@+id/lottieimage"
         tools:listitem="@layout/cardview">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieimage"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/submitbutton"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/astraunaut" />
 </androidx.constraintlayout.widget.ConstraintLayout>

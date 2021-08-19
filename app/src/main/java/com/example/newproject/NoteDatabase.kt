@@ -7,11 +7,12 @@ import androidx.room.RoomDatabase
 import com.example.newproject.Note
 import com.example.newproject.Notedao
 
-@Database(entities = [Note::class], version = 1,exportSchema = false)
+@Database(entities = [Note::class], version = 1, exportSchema = false)
 
-abstract class NoteDatabase : RoomDatabase(){
+abstract class NoteDatabase : RoomDatabase() {
 
     abstract fun getNotedao(): Notedao
+
     companion object {
         @Volatile
         private var INSTANCE: NoteDatabase? = null
