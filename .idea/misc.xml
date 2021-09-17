@@ -4,12 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/drawable/button.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/drawable/button_5_gradient.xml" value="0.2484375" />
         <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/drawable/gradient.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout-v31/cardview.xml" value="0.25" />
-        <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/activity_main.xml" value="0.136" />
+        <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.176" />
         <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/activity_splash_screen2.xml" value="0.25" />
-        <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/cardview.xml" value="0.4" />
+        <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/button1.xml" value="0.536" />
+        <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/cardview.xml" value="0.2" />
         <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/splashscreen.xml" value="0.264" />
         <entry key="..\:/Users/AnkushK/AndroidStudioProjects/NewProject/app/src/main/res/layout/splashscreenb.xml" value="0.234375" />
       </map>

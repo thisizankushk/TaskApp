@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">NewProject</string>
     <string name="Tasker">Tasker</string>
+    <string name="button">button2</string>
 </resources>

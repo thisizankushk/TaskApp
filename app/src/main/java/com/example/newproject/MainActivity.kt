@@ -70,9 +70,5 @@ class MainActivity : AppCompatActivity(), NoteRecyclerAdapter.INoteAdapter {
             Toast.makeText(this, "Task Added!!", Toast.LENGTH_SHORT).show()
             addedText.setText("")
         }
-
-
     }
-
-
 }
